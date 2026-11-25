@@ -1,0 +1,155 @@
+{
+  "analysis_id": "b98749ad-5b2d-4c5d-8c98-8d0e188219f3",
+  "context": "Service delivery",
+  "context_match_count": 2,
+  "detected_signals": [
+    "ticket",
+    "sla"
+  ],
+  "quality_index": 96,
+  "high_severity_finding_count": 2,
+  "row_count": 33,
+  "column_count": 7,
+  "findings": [
+    {
+      "type": "data_quality",
+      "severity": "low",
+      "title": "Missing values detected",
+      "description": "3 missing values were detected across 1 columns.",
+      "affected_records": 3,
+      "affected_columns": [
+        "owner_role"
+      ],
+      "business_risk": "Incomplete data can distort analysis, reporting accuracy, and operational decisions."
+    },
+    {
+      "type": "data_quality",
+      "severity": "low",
+      "title": "Duplicate records detected",
+      "description": "1 full duplicate records were found.",
+      "affected_records": 1,
+      "affected_columns": [],
+      "business_risk": "Duplicate records can inflate volume, revenue, workload, or performance metrics."
+    },
+    {
+      "type": "data_quality",
+      "severity": "medium",
+      "title": "Duplicate identifiers detected in ticket_id",
+      "description": "2 duplicate values were detected in the identifier column ticket_id.",
+      "affected_records": 2,
+      "affected_columns": [
+        "ticket_id"
+      ],
+      "business_risk": "Duplicate identifiers can create reconciliation errors, ownership conflicts, fulfilment mistakes, or inaccurate reporting."
+    },
+    {
+      "type": "data_quality",
+      "severity": "medium",
+      "title": "Potential invalid zero values in resolution_time",
+      "description": "3 zero values were detected in resolution_time, which may indicate missing or invalid operational records.",
+      "affected_records": 3,
+      "affected_columns": [
+        "resolution_time"
+      ],
+      "business_risk": "Invalid zero values can hide revenue leakage, metadata errors, process exceptions, or failed measurement."
+    },
+    {
+      "type": "data_quality",
+      "severity": "low",
+      "title": "Outliers detected in amount",
+      "description": "1 statistically unusual values were detected in amount.",
+      "affected_records": 1,
+      "affected_columns": [
+        "amount"
+      ],
+      "business_risk": "Outliers may reveal errors, fraud, process exceptions, or high-impact edge cases."
+    },
+    {
+      "type": "operations",
+      "severity": "high",
+      "title": "Operational risk statuses in status",
+      "description": "6 records are marked as failed, blocked, delayed, or cancelled.",
+      "affected_records": 6,
+      "affected_columns": [
+        "status"
+      ],
+      "business_risk": "Risk statuses indicate workflow friction, delayed execution, or avoidable rework."
+    },
+    {
+      "type": "operations",
+      "severity": "high",
+      "title": "SLA breaches detected",
+      "description": "5 records indicate SLA breaches.",
+      "affected_records": 5,
+      "affected_columns": [
+        "sla_breached"
+      ],
+      "business_risk": "SLA breaches can reduce customer trust, increase escalation volume, and create contractual risk."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority_rank": 1,
+      "title": "Review operational risk statuses in status",
+      "description": "Confirm the finding with the dataset owner before choosing a correction or process change.",
+      "expected_outcome": "Potential improvement in data reliability; benefit requires measurement.",
+      "affected_records": 6,
+      "severity": "high",
+      "category": "operations",
+      "human_review_required": true
+    },
+    {
+      "priority_rank": 2,
+      "title": "Review sla breaches detected",
+      "description": "Confirm the finding with the dataset owner before choosing a correction or process change.",
+      "expected_outcome": "Potential improvement in data reliability; benefit requires measurement.",
+      "affected_records": 5,
+      "severity": "high",
+      "category": "operations",
+      "human_review_required": true
+    },
+    {
+      "priority_rank": 3,
+      "title": "Review potential invalid zero values in resolution_time",
+      "description": "Confirm the finding with the dataset owner before choosing a correction or process change.",
+      "expected_outcome": "Potential improvement in data reliability; benefit requires measurement.",
+      "affected_records": 3,
+      "severity": "medium",
+      "category": "data_quality",
+      "human_review_required": true
+    },
+    {
+      "priority_rank": 4,
+      "title": "Review duplicate identifiers detected in ticket_id",
+      "description": "Confirm the finding with the dataset owner before choosing a correction or process change.",
+      "expected_outcome": "Potential improvement in data reliability; benefit requires measurement.",
+      "affected_records": 2,
+      "severity": "medium",
+      "category": "data_quality",
+      "human_review_required": true
+    },
+    {
+      "priority_rank": 5,
+      "title": "Review missing values detected",
+      "description": "Confirm the finding with the dataset owner before choosing a correction or process change.",
+      "expected_outcome": "Potential improvement in data reliability; benefit requires measurement.",
+      "affected_records": 3,
+      "severity": "low",
+      "category": "data_quality",
+      "human_review_required": true
+    },
+    {
+      "priority_rank": 6,
+      "title": "Review duplicate records detected",
+      "description": "Confirm the finding with the dataset owner before choosing a correction or process change.",
+      "expected_outcome": "Potential improvement in data reliability; benefit requires measurement.",
+      "affected_records": 1,
+      "severity": "low",
+      "category": "data_quality",
+      "human_review_required": true
+    }
+  ],
+  "executive_summary": "Header-based context hint: Service delivery. Quality index 96/100 is a rule-based heuristic, not a probability or certification. 7 findings and 6 review actions. Findings can overlap; absence of a rule match does not establish data correctness. No trained model or live AI is used.",
+  "execution_time_seconds": 0.0,
+  "source_file_name": "service_requests.csv"
+}
