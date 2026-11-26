@@ -1,0 +1,34 @@
+ticket_id,team,status,sla_breached,resolution_time,amount,owner_role
+REQ-001,Platform,completed,false,2,3,Team lead
+REQ-002,Data,completed,false,3,6,Team lead
+REQ-003,Support,completed,false,4,9,Team lead
+REQ-004,Platform,completed,false,5,12,Team lead
+REQ-004,Data,completed,false,1,15,Team lead
+REQ-006,Support,completed,true,2,18,Team lead
+REQ-007,Platform,delayed,false,3,21,Team lead
+REQ-008,Data,completed,false,4,24,Team lead
+REQ-009,Support,completed,false,0,27,Team lead
+REQ-010,Platform,completed,false,1,30,
+REQ-011,Data,failed,false,2,33,Team lead
+REQ-012,Support,completed,true,3,36,Team lead
+REQ-013,Platform,completed,false,4,39,Team lead
+REQ-014,Data,delayed,false,5,42,Team lead
+REQ-015,Support,completed,false,1,45,Team lead
+REQ-016,Platform,completed,false,2,48,Team lead
+REQ-017,Data,completed,false,3,51,Team lead
+REQ-018,Support,completed,true,0,54,Team lead
+REQ-019,Platform,completed,false,5,57,Team lead
+REQ-020,Data,completed,false,1,60,
+REQ-021,Support,delayed,false,2,63,Team lead
+REQ-022,Platform,failed,false,3,66,Team lead
+REQ-023,Data,completed,false,4,69,Team lead
+REQ-024,Support,completed,true,5,72,Team lead
+REQ-025,Platform,completed,false,1,75,Team lead
+REQ-026,Data,completed,false,2,78,Team lead
+REQ-027,Support,completed,false,0,81,Team lead
+REQ-028,Platform,delayed,false,4,84,Team lead
+REQ-029,Data,completed,false,5,87,Team lead
+REQ-030,Support,completed,true,1,500,
+REQ-031,Platform,completed,false,2,93,Team lead
+REQ-032,Data,completed,false,3,96,Team lead
+REQ-001,Platform,completed,false,2,3,Team lead
